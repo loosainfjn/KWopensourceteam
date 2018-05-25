@@ -1,3 +1,7 @@
-﻿  main.cpp
-c:\users\zofld\desktop\kw_os_project\kw_os_project\main.cpp(211): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
-  KW_OS_Project.vcxproj -> C:\Users\zofld\Desktop\KW_OS_Project\Debug\KW_OS_Project.exe
+﻿  Calendar_Option3.cpp
+c:\users\zofld\desktop\kw_os_project\kw_os_project\calendar_option3.cpp(20): warning C4101: 'Calendar_in_Calendar_Option3' :참조되지 않은 지역 변수입니다.
+  Calendar_Option2.cpp
+  Calendar_Option1.cpp
+  Calendar_Main_Screen.cpp
+  코드를 생성하고 있습니다...
+  KW_OS_PROJECT.vcxproj -> C:\Users\zofld\Desktop\KW_OS_PROJECT\Debug\KW_OS_PROJECT.exe

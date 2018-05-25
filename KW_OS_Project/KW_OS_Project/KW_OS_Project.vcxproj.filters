@@ -13,10 +13,72 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Screen">
+      <UniqueIdentifier>{0e6515e4-e96d-4867-9b02-f358a5955be9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Calendar">
+      <UniqueIdentifier>{318126de-e726-40ad-91aa-9f22d04d5b58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Other">
+      <UniqueIdentifier>{b5c8d0a5-1702-4d2c-b041-5e23a79d0534}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\CalendarOption">
+      <UniqueIdentifier>{1b5c3e16-4287-4b13-9513-5a206038d0ea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="MAIN.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ChangeColor.cpp">
+      <Filter>소스 파일\CalendarOption</Filter>
+    </ClCompile>
+    <ClCompile Include="Calendar_Main_Screen.cpp">
+      <Filter>소스 파일\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Main_Screen.cpp">
+      <Filter>소스 파일\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="Calendar_Month.cpp">
+      <Filter>소스 파일\Calendar</Filter>
+    </ClCompile>
+    <ClCompile Include="Calendar_Week.cpp">
+      <Filter>소스 파일\Calendar</Filter>
+    </ClCompile>
+    <ClCompile Include="Go_to_xy.cpp">
+      <Filter>소스 파일\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Main_Screen.cpp">
+      <Filter>소스 파일\Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="Calendar_Option1.cpp">
+      <Filter>소스 파일\CalendarOption</Filter>
+    </ClCompile>
+    <ClCompile Include="Calendar_Option2.cpp">
+      <Filter>소스 파일\CalendarOption</Filter>
+    </ClCompile>
+    <ClCompile Include="Calendar_Option3.cpp">
+      <Filter>소스 파일\CalendarOption</Filter>
+    </ClCompile>
+    <ClCompile Include="Calendar_Option4.cpp">
+      <Filter>소스 파일\CalendarOption</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Screen.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Calendar.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Go_to_xy.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Color_String.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Calendar_Option.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{EECC765A-C754-4A17-A944-66B0F3801D6D}</ProjectGuid>
+    <ProjectGuid>{20865431-DB8B-44E1-BBCD-DDD5539328B7}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>KWOSProject</RootNamespace>
+    <RootNamespace>KWOSPROJECT</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Calendar_Month.cpp" />
+    <ClCompile Include="Calendar_Main_Screen.cpp" />
+    <ClCompile Include="Calendar_Week.cpp" />
+    <ClCompile Include="ChangeColor.cpp" />
+    <ClCompile Include="Game_Main_Screen.cpp" />
+    <ClCompile Include="Go_to_xy.cpp" />
+    <ClCompile Include="MAIN.cpp" />
+    <ClCompile Include="Main_Screen.cpp" />
+    <ClCompile Include="Calendar_Option1.cpp" />
+    <ClCompile Include="Calendar_Option2.cpp" />
+    <ClCompile Include="Calendar_Option3.cpp" />
+    <ClCompile Include="Calendar_Option4.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Calendar.h" />
+    <ClInclude Include="Color_String.h" />
+    <ClInclude Include="Go_to_xy.h" />
+    <ClInclude Include="Calendar_Option.h" />
+    <ClInclude Include="Screen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
