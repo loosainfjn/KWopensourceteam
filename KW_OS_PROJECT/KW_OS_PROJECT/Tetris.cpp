@@ -13,7 +13,7 @@
 #pragma warning (disable : 4996)
 
 
-void gotoxy(int x, int y) { //gotoxy함수 
+void gotoxy_Tetris(int x, int y) { //gotoxy_Tetris함수 
 
 	COORD pos = { 2 * x,y };
 
@@ -25,7 +25,7 @@ void gotoxy(int x, int y) { //gotoxy함수
 
 typedef enum { NOCURSOR, SOLIDCURSOR, NORMALCURSOR } CURSOR_TYPE; //커서숨기는 함수에 사용되는 열거형 
 
-void setcursortype(CURSOR_TYPE c) { //커서숨기는 함수 
+void setcursortype_Tetris(CURSOR_TYPE c) { //커서숨기는 함수 
 
 	CONSOLE_CURSOR_INFO CurInfo;
 
@@ -73,7 +73,7 @@ void Tetris::Tetris_main() {
 
 	srand((unsigned)time(NULL)); //난수표생성 
 
-	setcursortype(NOCURSOR); //커서 없앰 
+	setcursortype_Tetris(NOCURSOR); //커서 없앰 
 
 	title(); //메인타이틀 호출 
 
@@ -129,35 +129,35 @@ void Tetris::title(void) {
 
 
 
-	gotoxy(x, y + 0); printf("■□□□■■■□□■■□□■■"); Sleep(100);
+	gotoxy_Tetris(x, y + 0); printf("■□□□■■■□□■■□□■■"); Sleep(100);
 
-	gotoxy(x, y + 1); printf("■■■□  ■□□    ■■□□■"); Sleep(100);
+	gotoxy_Tetris(x, y + 1); printf("■■■□  ■□□    ■■□□■"); Sleep(100);
 
-	gotoxy(x, y + 2); printf("□□□■              □■  ■"); Sleep(100);
+	gotoxy_Tetris(x, y + 2); printf("□□□■              □■  ■"); Sleep(100);
 
-	gotoxy(x, y + 3); printf("■■□■■  □  ■  □□■□□"); Sleep(100);
+	gotoxy_Tetris(x, y + 3); printf("■■□■■  □  ■  □□■□□"); Sleep(100);
 
-	gotoxy(x, y + 4); printf("■■  ■□□□■■■□■■□□"); Sleep(100);
+	gotoxy_Tetris(x, y + 4); printf("■■  ■□□□■■■□■■□□"); Sleep(100);
 
-	gotoxy(x, y + 5); printf("      blog.naver.com/azure0777"); Sleep(100);
+	
 
-	gotoxy(x + 5, y + 2); printf("T E T R I S"); Sleep(100);
+	gotoxy_Tetris(x + 5, y + 2); printf("T E T R I S"); Sleep(100);
 
-	gotoxy(x, y + 7); printf("Please Enter Any Key to Start..");
+	gotoxy_Tetris(x, y + 7); printf("Please Enter Any Key to Start..");
 
-	gotoxy(x, y + 9); printf("  △   : Shift");
+	gotoxy_Tetris(x, y + 9); printf("  △   : Shift");
 
-	gotoxy(x, y + 10); printf("◁  ▷ : Left / Right");
+	gotoxy_Tetris(x, y + 10); printf("◁  ▷ : Left / Right");
 
-	gotoxy(x, y + 11); printf("  ▽   : Soft Drop");
+	gotoxy_Tetris(x, y + 11); printf("  ▽   : Soft Drop");
 
-	gotoxy(x, y + 12); printf(" SPACE : Hard Drop");
+	gotoxy_Tetris(x, y + 12); printf(" SPACE : Hard Drop");
 
-	gotoxy(x, y + 13); printf("   P   : Pause");
+	gotoxy_Tetris(x, y + 13); printf("   P   : Pause");
 
-	gotoxy(x, y + 14); printf("  ESC  : Quit");
+	gotoxy_Tetris(x, y + 14); printf("  ESC  : Quit");
 
-	gotoxy(x, y + 16); printf("BONUS FOR HARD DROPS / COMBOS");
+	gotoxy_Tetris(x, y + 16); printf("BONUS FOR HARD DROPS / COMBOS");
 
 
 
@@ -165,13 +165,13 @@ void Tetris::title(void) {
 
 		if (kbhit()) break; //키입력이 있으면 무한루프 종료 
 
-		if (cnt % 200 == 0) { gotoxy(x + 4, y + 1); printf("★"); }       //cnt가 200으로 나누어 떨어질때 별을 표시 
+		if (cnt % 200 == 0) { gotoxy_Tetris(x + 4, y + 1); printf("★"); }       //cnt가 200으로 나누어 떨어질때 별을 표시 
 
-		if ((cnt % 200 - 100) == 0) { gotoxy(x + 4, y + 1); printf("  "); } //위 카운트에서 100카운트 간격으로 별을 지움 
+		if ((cnt % 200 - 100) == 0) { gotoxy_Tetris(x + 4, y + 1); printf("  "); } //위 카운트에서 100카운트 간격으로 별을 지움 
 
-		if ((cnt % 350) == 0) { gotoxy(x + 13, y + 2); printf("☆"); } //윗별과 같지만 시간차를 뒀음 
+		if ((cnt % 350) == 0) { gotoxy_Tetris(x + 13, y + 2); printf("☆"); } //윗별과 같지만 시간차를 뒀음 
 
-		if ((cnt % 350 - 100) == 0) { gotoxy(x + 13, y + 2); printf("  "); }
+		if ((cnt % 350 - 100) == 0) { gotoxy_Tetris(x + 13, y + 2); printf("  "); }
 
 		Sleep(10); // 00.1초 딜레이  
 
@@ -309,41 +309,41 @@ void Tetris::draw_map(void) { //게임 상태 표시를 나타내는 함수
 
 						   // 그래서 혹시 게임 상태 표시 위치가 바뀌어도 그 함수에서 안바꿔도 되게.. 
 
-	gotoxy(STATUS_X_ADJ, STATUS_Y_LEVEL = y); printf(" LEVEL : %5d", level);
+	gotoxy_Tetris(STATUS_X_ADJ, STATUS_Y_LEVEL = y); printf(" LEVEL : %5d", level);
 
-	gotoxy(STATUS_X_ADJ, STATUS_Y_GOAL = y + 1); printf(" GOAL  : %5d", 10 - cnt);
+	gotoxy_Tetris(STATUS_X_ADJ, STATUS_Y_GOAL = y + 1); printf(" GOAL  : %5d", 10 - cnt);
 
-	gotoxy(STATUS_X_ADJ, y + 2); printf("+-  N E X T  -+ ");
+	gotoxy_Tetris(STATUS_X_ADJ, y + 2); printf("+-  N E X T  -+ ");
 
-	gotoxy(STATUS_X_ADJ, y + 3); printf("|             | ");
+	gotoxy_Tetris(STATUS_X_ADJ, y + 3); printf("|             | ");
 
-	gotoxy(STATUS_X_ADJ, y + 4); printf("|             | ");
+	gotoxy_Tetris(STATUS_X_ADJ, y + 4); printf("|             | ");
 
-	gotoxy(STATUS_X_ADJ, y + 5); printf("|             | ");
+	gotoxy_Tetris(STATUS_X_ADJ, y + 5); printf("|             | ");
 
-	gotoxy(STATUS_X_ADJ, y + 6); printf("|             | ");
+	gotoxy_Tetris(STATUS_X_ADJ, y + 6); printf("|             | ");
 
-	gotoxy(STATUS_X_ADJ, y + 7); printf("+-- -  -  - --+ ");
+	gotoxy_Tetris(STATUS_X_ADJ, y + 7); printf("+-- -  -  - --+ ");
 
-	gotoxy(STATUS_X_ADJ, y + 8); printf(" YOUR SCORE :");
+	gotoxy_Tetris(STATUS_X_ADJ, y + 8); printf(" YOUR SCORE :");
 
-	gotoxy(STATUS_X_ADJ, STATUS_Y_SCORE = y + 9); printf("        %6d", score);
+	gotoxy_Tetris(STATUS_X_ADJ, STATUS_Y_SCORE = y + 9); printf("        %6d", score);
 
-	gotoxy(STATUS_X_ADJ, y + 10); printf(" LAST SCORE :");
+	gotoxy_Tetris(STATUS_X_ADJ, y + 10); printf(" LAST SCORE :");
 
-	gotoxy(STATUS_X_ADJ, y + 11); printf("        %6d", last_score);
+	gotoxy_Tetris(STATUS_X_ADJ, y + 11); printf("        %6d", last_score);
 
-	gotoxy(STATUS_X_ADJ, y + 12); printf(" BEST SCORE :");
+	gotoxy_Tetris(STATUS_X_ADJ, y + 12); printf(" BEST SCORE :");
 
-	gotoxy(STATUS_X_ADJ, y + 13); printf("        %6d", best_score);
+	gotoxy_Tetris(STATUS_X_ADJ, y + 13); printf("        %6d", best_score);
 
-	gotoxy(STATUS_X_ADJ, y + 15); printf("  △   : Shift        SPACE : Hard Drop");
+	gotoxy_Tetris(STATUS_X_ADJ, y + 15); printf("  △   : Shift        SPACE : Hard Drop");
 
-	gotoxy(STATUS_X_ADJ, y + 16); printf("◁  ▷ : Left / Right   P   : Pause");
+	gotoxy_Tetris(STATUS_X_ADJ, y + 16); printf("◁  ▷ : Left / Right   P   : Pause");
 
-	gotoxy(STATUS_X_ADJ, y + 17); printf("  ▽   : Soft Drop     ESC  : Quit");
+	gotoxy_Tetris(STATUS_X_ADJ, y + 17); printf("  ▽   : Soft Drop     ESC  : Quit");
 
-	gotoxy(STATUS_X_ADJ, y + 20); printf("blog.naver.com/azure0777");
+	
 
 }
 
@@ -369,7 +369,7 @@ void Tetris::draw_main(void) { //게임판 그리는 함수
 
 													//이게 없으면 게임판전체를 계속 그려서 느려지고 반짝거림
 
-				gotoxy(MAIN_X_ADJ + j, MAIN_Y_ADJ + i);
+				gotoxy_Tetris(MAIN_X_ADJ + j, MAIN_Y_ADJ + i);
 
 				switch (main_org[i][j]) {
 
@@ -463,7 +463,7 @@ void Tetris::new_block(void) { //새로운 블록 생성
 
 			if (blocks[b_type_next][0][i][j] == 1) {
 
-				gotoxy(STATUS_X_ADJ + 2 + j, i + 6);
+				gotoxy_Tetris(STATUS_X_ADJ + 2 + j, i + 6);
 
 				printf("■");
 
@@ -471,7 +471,7 @@ void Tetris::new_block(void) { //새로운 블록 생성
 
 			else {
 
-				gotoxy(STATUS_X_ADJ + 2 + j, i + 6);
+				gotoxy_Tetris(STATUS_X_ADJ + 2 + j, i + 6);
 
 				printf("  ");
 
@@ -545,7 +545,7 @@ void Tetris::check_key(void) {
 
 					score += level; // hard drop 보너스
 
-					gotoxy(STATUS_X_ADJ, STATUS_Y_SCORE); printf("        %6d", score); //점수 표시  
+					gotoxy_Tetris(STATUS_X_ADJ, STATUS_Y_SCORE); printf("        %6d", score); //점수 표시  
 
 				}
 
@@ -851,7 +851,7 @@ void Tetris::check_line(void) {
 
 		if (combo>1) { //2콤보이상인 경우 경우 보너스및 메세지를 게임판에 띄웠다가 지움 
 
-			gotoxy(MAIN_X_ADJ + (MAIN_X / 2) - 1, MAIN_Y_ADJ + by - 2); printf("%d COMBO!", combo);
+			gotoxy_Tetris(MAIN_X_ADJ + (MAIN_X / 2) - 1, MAIN_Y_ADJ + by - 2); printf("%d COMBO!", combo);
 
 			Sleep(500);
 
@@ -863,9 +863,9 @@ void Tetris::check_line(void) {
 
 		}
 
-		gotoxy(STATUS_X_ADJ, STATUS_Y_GOAL); printf(" GOAL  : %5d", (cnt <= 10) ? 10 - cnt : 0);
+		gotoxy_Tetris(STATUS_X_ADJ, STATUS_Y_GOAL); printf(" GOAL  : %5d", (cnt <= 10) ? 10 - cnt : 0);
 
-		gotoxy(STATUS_X_ADJ, STATUS_Y_SCORE); printf("        %6d", score);
+		gotoxy_Tetris(STATUS_X_ADJ, STATUS_Y_SCORE); printf("        %6d", score);
 
 	}
 
@@ -893,11 +893,11 @@ void Tetris::check_level_up(void) {
 
 		for (i = 0; i<4; i++) {
 
-			gotoxy(MAIN_X_ADJ + (MAIN_X / 2) - 3, MAIN_Y_ADJ + 4);
+			gotoxy_Tetris(MAIN_X_ADJ + (MAIN_X / 2) - 3, MAIN_Y_ADJ + 4);
 
 			printf("             ");
 
-			gotoxy(MAIN_X_ADJ + (MAIN_X / 2) - 2, MAIN_Y_ADJ + 6);
+			gotoxy_Tetris(MAIN_X_ADJ + (MAIN_X / 2) - 2, MAIN_Y_ADJ + 6);
 
 			printf("             ");
 
@@ -905,11 +905,11 @@ void Tetris::check_level_up(void) {
 
 
 
-			gotoxy(MAIN_X_ADJ + (MAIN_X / 2) - 3, MAIN_Y_ADJ + 4);
+			gotoxy_Tetris(MAIN_X_ADJ + (MAIN_X / 2) - 3, MAIN_Y_ADJ + 4);
 
 			printf("☆LEVEL UP!☆");
 
-			gotoxy(MAIN_X_ADJ + (MAIN_X / 2) - 2, MAIN_Y_ADJ + 6);
+			gotoxy_Tetris(MAIN_X_ADJ + (MAIN_X / 2) - 2, MAIN_Y_ADJ + 6);
 
 			printf("☆SPEED UP!☆");
 
@@ -929,7 +929,7 @@ void Tetris::check_level_up(void) {
 
 				main_org[i][j] = INACTIVE_BLOCK; // 줄을 블록으로 모두 채우고 
 
-				gotoxy(MAIN_X_ADJ + j, MAIN_Y_ADJ + i); // 별을 찍어줌.. 이뻐보이게 
+				gotoxy_Tetris(MAIN_X_ADJ + j, MAIN_Y_ADJ + i); // 별을 찍어줌.. 이뻐보이게 
 
 				printf("★");
 
@@ -1007,9 +1007,9 @@ void Tetris::check_level_up(void) {
 
 
 
-		gotoxy(STATUS_X_ADJ, STATUS_Y_LEVEL); printf(" LEVEL : %5d", level); //레벨표시 
+		gotoxy_Tetris(STATUS_X_ADJ, STATUS_Y_LEVEL); printf(" LEVEL : %5d", level); //레벨표시 
 
-		gotoxy(STATUS_X_ADJ, STATUS_Y_GOAL); printf(" GOAL  : %5d", 10 - cnt); // 레벨목표 표시 
+		gotoxy_Tetris(STATUS_X_ADJ, STATUS_Y_GOAL); printf(" GOAL  : %5d", 10 - cnt); // 레벨목표 표시 
 
 
 
@@ -1035,25 +1035,25 @@ void Tetris::check_game_over(void) {
 
 		if (main_org[3][i]>0) { //천장(위에서 세번째 줄)에 inactive가 생성되면 게임 오버 
 
-			gotoxy(x, y + 0); printf("▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤"); //게임오버 메세지 
+			gotoxy_Tetris(x, y + 0); printf("▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤"); //게임오버 메세지 
 
-			gotoxy(x, y + 1); printf("▤                              ▤");
+			gotoxy_Tetris(x, y + 1); printf("▤                              ▤");
 
-			gotoxy(x, y + 2); printf("▤  +-----------------------+   ▤");
+			gotoxy_Tetris(x, y + 2); printf("▤  +-----------------------+   ▤");
 
-			gotoxy(x, y + 3); printf("▤  |  G A M E  O V E R..   |   ▤");
+			gotoxy_Tetris(x, y + 3); printf("▤  |  G A M E  O V E R..   |   ▤");
 
-			gotoxy(x, y + 4); printf("▤  +-----------------------+   ▤");
+			gotoxy_Tetris(x, y + 4); printf("▤  +-----------------------+   ▤");
 
-			gotoxy(x, y + 5); printf("▤   YOUR SCORE: %6d         ▤", score);
+			gotoxy_Tetris(x, y + 5); printf("▤   YOUR SCORE: %6d         ▤", score);
 
-			gotoxy(x, y + 6); printf("▤                              ▤");
+			gotoxy_Tetris(x, y + 6); printf("▤                              ▤");
 
-			gotoxy(x, y + 7); printf("▤  Press any key to restart..  ▤");
+			gotoxy_Tetris(x, y + 7); printf("▤  Press any key to restart..  ▤");
 
-			gotoxy(x, y + 8); printf("▤                              ▤");
+			gotoxy_Tetris(x, y + 8); printf("▤                              ▤");
 
-			gotoxy(x, y + 9); printf("▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤");
+			gotoxy_Tetris(x, y + 9); printf("▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤");
 
 			last_score = score; //게임점수를 옮김 
 
@@ -1065,13 +1065,13 @@ void Tetris::check_game_over(void) {
 
 
 
-				gotoxy(x, y + 6); printf("▤  ★★★ BEST SCORE! ★★★   ▤  ");
+				gotoxy_Tetris(x, y + 6); printf("▤  ★★★ BEST SCORE! ★★★   ▤  ");
 
 
 
 				if (file == 0) { //파일 에러메세지  
 
-					gotoxy(0, 0);
+					gotoxy_Tetris(0, 0);
 
 					printf("FILE ERROR: SYSTEM CANNOT WRITE BEST SCORE ON \"SCORE.DAT\"");
 
@@ -1117,21 +1117,21 @@ void Tetris::pause(void) { //게임 일시정지 함수
 
 	for (i = 1; i<MAIN_X - 2; i++) { //게임 일시정지 메세지 
 
-		gotoxy(x, y + 0); printf("▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤");
+		gotoxy_Tetris(x, y + 0); printf("▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤");
 
-		gotoxy(x, y + 1); printf("▤                              ▤");
+		gotoxy_Tetris(x, y + 1); printf("▤                              ▤");
 
-		gotoxy(x, y + 2); printf("▤  +-----------------------+   ▤");
+		gotoxy_Tetris(x, y + 2); printf("▤  +-----------------------+   ▤");
 
-		gotoxy(x, y + 3); printf("▤  |       P A U S E       |   ▤");
+		gotoxy_Tetris(x, y + 3); printf("▤  |       P A U S E       |   ▤");
 
-		gotoxy(x, y + 4); printf("▤  +-----------------------+   ▤");
+		gotoxy_Tetris(x, y + 4); printf("▤  +-----------------------+   ▤");
 
-		gotoxy(x, y + 5); printf("▤  Press any key to resume..   ▤");
+		gotoxy_Tetris(x, y + 5); printf("▤  Press any key to resume..   ▤");
 
-		gotoxy(x, y + 6); printf("▤                              ▤");
+		gotoxy_Tetris(x, y + 6); printf("▤                              ▤");
 
-		gotoxy(x, y + 7); printf("▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤");
+		gotoxy_Tetris(x, y + 7); printf("▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤▤");
 
 	}
 
@@ -1155,7 +1155,7 @@ void Tetris::pause(void) { //게임 일시정지 함수
 
 			if (blocks[b_type_next][0][i][j] == 1) {
 
-				gotoxy(MAIN_X + MAIN_X_ADJ + 3 + j, i + 6);
+				gotoxy_Tetris(MAIN_X + MAIN_X_ADJ + 3 + j, i + 6);
 
 				printf("■");
 
@@ -1163,7 +1163,7 @@ void Tetris::pause(void) { //게임 일시정지 함수
 
 			else {
 
-				gotoxy(MAIN_X + MAIN_X_ADJ + 3 + j, i + 6);
+				gotoxy_Tetris(MAIN_X + MAIN_X_ADJ + 3 + j, i + 6);
 
 				printf("  ");
 

@@ -1,9 +1,6 @@
-﻿  ChangeColor.cpp
-  Calendar_Option1.cpp
-  Calendar_Option2.cpp
-  Calendar_Option3.cpp
-c:\users\zofld\desktop\github_team\kwopensourceteam\kw_os_project\kw_os_project\calendar_option3.cpp(20): warning C4101: 'Calendar_in_Calendar_Option3' :참조되지 않은 지역 변수입니다.
-  Calendar_Option4.cpp
-c:\users\zofld\desktop\github_team\kwopensourceteam\kw_os_project\kw_os_project\calendar_option4.cpp(20): warning C4101: 'Calendar_in_Calendar_Option4' :참조되지 않은 지역 변수입니다.
-  코드를 생성하고 있습니다...
+﻿  Main_Screen.cpp
+c:\users\zofld\desktop\github_team\kwopensourceteam\kw_os_project\kw_os_project\snakegame.h(28): warning C4005: 'MAP_ADJ_X': 매크로 재정의
+  c:\users\zofld\desktop\github_team\kwopensourceteam\kw_os_project\kw_os_project\game2048.h(26): note: 'MAP_ADJ_X'의 이전 정의를 참조하십시오.
+c:\users\zofld\desktop\github_team\kwopensourceteam\kw_os_project\kw_os_project\snakegame.h(30): warning C4005: 'MAP_ADJ_Y': 매크로 재정의
+  c:\users\zofld\desktop\github_team\kwopensourceteam\kw_os_project\kw_os_project\game2048.h(28): note: 'MAP_ADJ_Y'의 이전 정의를 참조하십시오.
   KW_OS_PROJECT.vcxproj -> C:\Users\zofld\Desktop\Github_team\KWopensourceteam\KW_OS_PROJECT\Debug\KW_OS_PROJECT.exe

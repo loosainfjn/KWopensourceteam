@@ -139,7 +139,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Game2048.cpp" />
     <ClCompile Include="Calendar_Month.cpp" />
+    <ClCompile Include="HanoiTower.cpp" />
     <ClCompile Include="Main_Screen.cpp" />
     <ClCompile Include="Calendar_Week.cpp" />
     <ClCompile Include="ChangeColor.cpp" />
@@ -149,14 +151,18 @@
     <ClCompile Include="Calendar_Option2.cpp" />
     <ClCompile Include="Calendar_Option3.cpp" />
     <ClCompile Include="Calendar_Option4.cpp" />
+    <ClCompile Include="SnakeGame.cpp" />
     <ClCompile Include="Tetris.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game2048.h" />
     <ClInclude Include="Calendar.h" />
     <ClInclude Include="Color_String.h" />
     <ClInclude Include="Go_to_xy.h" />
     <ClInclude Include="Calendar_Option.h" />
+    <ClInclude Include="HanoiTower.h" />
     <ClInclude Include="Screen.h" />
+    <ClInclude Include="SnakeGame.h" />
     <ClInclude Include="Tetris.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

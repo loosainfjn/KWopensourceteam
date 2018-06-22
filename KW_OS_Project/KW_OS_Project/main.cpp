@@ -18,7 +18,7 @@ int main()
 {
 	system("mode con cols=112 lines=180");
 	system("tiTle Calendar");
-	Tetris Tetris_in_main;
+
 	Screen Screen_in_main;
 
 	

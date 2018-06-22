@@ -28,6 +28,9 @@
     <Filter Include="소스 파일\Game">
       <UniqueIdentifier>{33e62811-bca4-4331-bdb8-3004401c52bc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\Game">
+      <UniqueIdentifier>{0f598ee6-a315-47d6-960c-25af4373f528}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MAIN.cpp">
@@ -63,6 +66,15 @@
     <ClCompile Include="Main_Screen.cpp">
       <Filter>소스 파일\Screen</Filter>
     </ClCompile>
+    <ClCompile Include="Game2048.cpp">
+      <Filter>소스 파일\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="SnakeGame.cpp">
+      <Filter>소스 파일\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="HanoiTower.cpp">
+      <Filter>소스 파일\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Screen.h">
@@ -80,8 +92,17 @@
     <ClInclude Include="Calendar_Option.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Game2048.h">
+      <Filter>헤더 파일\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="SnakeGame.h">
+      <Filter>헤더 파일\Game</Filter>
+    </ClInclude>
     <ClInclude Include="Tetris.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="HanoiTower.h">
+      <Filter>헤더 파일\Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
