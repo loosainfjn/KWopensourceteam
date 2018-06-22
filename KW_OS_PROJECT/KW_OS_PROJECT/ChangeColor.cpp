@@ -15,7 +15,7 @@ using namespace std;
 #define STD_OUTPUT_HANDLE ((DWORD)-11)
 #include "Color_String.h"
 
-void Calendar_Option::Calendar_ChangeColor()
+void Calendar_Option::Calendar_ChangeColor() //색바꾸기
 {
 	Color_String Color_String_in_ChangeColor;
 	Screen Screen_in_ChangeColor;
@@ -42,7 +42,7 @@ void Calendar_Option::Calendar_ChangeColor()
 	scanf("%d", &scan);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), scan);
 	system("cls");
-	Screen_in_ChangeColor.Calendar_Main_Screen();
+	Screen_in_ChangeColor.Main_Screen();
 }
 void Color_String::colorstring(char* str, int color)
 {

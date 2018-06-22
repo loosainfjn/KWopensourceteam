@@ -37,7 +37,7 @@ void Calendar_Option::Calendar_Option3()
 			printf("\n☆★☆★☆Please re-enter★☆★☆★\n\n");
 			continue;
 		}
-		else if (month == 1) //1월일때 잘못입력
+		else if ((month == 1)||(month==3)||(month==5)||(month==7)||(month==8)||(month==10)||(month==12)) //1,3,5,7,8,10,12월일때 잘못입력
 		{
 			if (date < 1 || date>31)
 			{
@@ -47,97 +47,8 @@ void Calendar_Option::Calendar_Option3()
 			else
 				break;
 		}
-		else if (month == 3) //3월일때 잘못입력
-		{
-			if (date < 1 || date>31)
-			{
-				printf("\n☆★☆★☆Please re-enter★☆★☆★\n\n");
-				continue;
-			}
-			else
-				break;
-		}
-		else if (month == 5) //5월일때 잘못입력
-		{
-			if (date < 1 || date>31)
-			{
-				printf("\n☆★☆★☆Please re-enter★☆★☆★\n\n");
-				continue;
-			}
-			else
-				break;
-		}
-		else if (month == 7) //7월일때 잘못입력
-		{
-			if (date < 1 || date>31)
-			{
-				printf("\n☆★☆★☆Please re-enter★☆★☆★\n\n");
-				continue;
-			}
-			else
-				break;
-		}
-		else if (month == 8) //8월일때 잘못입력
-		{
-			if (date < 1 || date>31)
-			{
-				printf("\n☆★☆★☆Please re-enter★☆★☆★\n\n");
-				continue;
-			}
-			else
-				break;
-		}
-		else if (month == 10) //10월일때 잘못입력
-		{
-			if (date < 1 || date>31)
-			{
-				printf("\n☆★☆★☆Please re-enter★☆★☆★\n\n");
-				continue;
-			}
-			else
-				break;
-		}
-		else if (month == 12) //12월일때 잘못입력
-		{
-			if (date < 1 || date>31)
-			{
-				printf("\n☆★☆★☆Please re-enter★☆★☆★\n\n");
-				continue;
-			}
-			else
-				break;
-		}
-		else if (month == 4)  //4월일때 잘못입력
-		{
-			if (date < 1 || date>30)
-			{
-				printf("\n☆★☆★☆Please re-enter★☆★☆★\n\n");
-				continue;
-			}
-			else
-				break;
-		}
-		else if (month == 6) //6월일때 잘못입력
-		{
-			if (date < 1 || date>30)
-			{
-				printf("\n☆★☆★☆Please re-enter★☆★☆★\n\n");
-				continue;
-			}
-			else
-				break;
-		}
-		else if (month == 9) //9월일때 잘못입력
-		{
-			if (date < 1 || date>30)
-			{
-				printf("\n☆★☆★☆Please re-enter★☆★☆★\n\n");
-				continue;
-			}
-			else
-				break;
-		}
-		else if (month == 11) //11월일때 잘못입력
+		
+		else if ((month == 4)||(month==6)||(month==9)||(month==11))  //4,6,9,11월일때 잘못입력
 		{
 			if (date < 1 || date>30)
 			{
@@ -247,7 +158,7 @@ void Calendar_Option::Calendar_Option3()
 		{
 			Sleep(100);
 			system("cls"); //화면 전체지우기
-			Screen_in_Calendar_Option3.Calendar_Main_Screen();
+			Screen_in_Calendar_Option3.Main_Screen();
 			break;
 		}
 		else if (opt < 1 || opt>2)
@@ -257,14 +168,14 @@ void Calendar_Option::Calendar_Option3()
 			printf("\n\n▩▩▩▩▩▩▩▩▩\n\n");
 			printf("%7s %d\n\n", eng_month[month - 1], year);
 			char eng_day[][6] = { "SUN","MON","TUE","WED","THU","FRI","SAT" }; //요일 영어이름
-			if (month >= 3 && month <= 12)
+			if (month >= 3 && month <= 12) //3~12월 요일 구하는 부분
 			{
 				printf("=================\n");
 				printf("       %s        \n", eng_day[(year + year / 4 - year / 100 + year / 400 + (13 * month + 8) / 5 + date) % 7]); //요일구하기 첼러의 합동식 사용
 				printf("=================\n");
 			}
 
-			else if (month == 1 || month == 2)
+			else if (month == 1 || month == 2) //1,2월의 요일 구하는 부분
 			{
 				year -= 1, month += 12;
 				printf("=================\n");

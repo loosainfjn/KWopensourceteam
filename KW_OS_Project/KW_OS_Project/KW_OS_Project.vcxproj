@@ -140,17 +140,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Calendar_Month.cpp" />
-    <ClCompile Include="Calendar_Main_Screen.cpp" />
+    <ClCompile Include="Main_Screen.cpp" />
     <ClCompile Include="Calendar_Week.cpp" />
     <ClCompile Include="ChangeColor.cpp" />
-    <ClCompile Include="Game_Main_Screen.cpp" />
     <ClCompile Include="Go_to_xy.cpp" />
     <ClCompile Include="MAIN.cpp" />
-    <ClCompile Include="Main_Screen.cpp" />
     <ClCompile Include="Calendar_Option1.cpp" />
     <ClCompile Include="Calendar_Option2.cpp" />
     <ClCompile Include="Calendar_Option3.cpp" />
     <ClCompile Include="Calendar_Option4.cpp" />
+    <ClCompile Include="Tetris.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Calendar.h" />
@@ -158,6 +157,7 @@
     <ClInclude Include="Go_to_xy.h" />
     <ClInclude Include="Calendar_Option.h" />
     <ClInclude Include="Screen.h" />
+    <ClInclude Include="Tetris.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

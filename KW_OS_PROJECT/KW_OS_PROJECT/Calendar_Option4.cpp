@@ -14,7 +14,7 @@ using namespace std;
 #include "Go_to_xy.h"
 
 
-void Calendar_Option::Calendar_Option4()
+void Calendar_Option::Calendar_Option4() //달력 옵션4
 {
 	int opt;
 	Calendar Calendar_in_Calendar_Option4;
@@ -73,7 +73,7 @@ void Calendar_Option::Calendar_Option4()
 		{
 			Sleep(100); //느리게
 			system("cls"); //화면 전체지우기
-			Screen_in_Calendar_Option4.Calendar_Main_Screen();
+			Screen_in_Calendar_Option4.Main_Screen();
 			break;
 		}
 		else if (opt < 1 || opt>2)

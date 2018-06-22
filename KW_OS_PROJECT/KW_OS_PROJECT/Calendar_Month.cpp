@@ -14,7 +14,7 @@ using namespace std;
 #include "Go_to_xy.h"
 
 
-void Calendar::Calendar_Month(int year, int month)
+void Calendar::Calendar_Month(int year, int month) //년도와 월을 입력 받아 달력출력
 {
 	Go_to_xy Go_to_xy_in_Calendar_Month;
 	string sch[4][31];
@@ -61,7 +61,7 @@ void Calendar::Calendar_Month(int year, int month)
 	}
 
 
-	days = (year - 1) * 365 + (year - 1) / 4 - (year - 1) / 100 + (year - 1) / 400;
+	days = (year - 1) * 365 + (year - 1) / 4 - (year - 1) / 100 + (year - 1) / 400; //그 년도 그월에 몇일 계산하는 공식
 
 	for (int i = 0; i < month - 1; i++)
 	{

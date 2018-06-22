@@ -14,7 +14,7 @@ using namespace std;
 #include "Go_to_xy.h"
 
 
-void Calendar_Option::Calendar_Option1()
+void Calendar_Option::Calendar_Option1() //달력옵션1
 {
 	int year = 0, month = 0;
 	int opt;
@@ -23,7 +23,7 @@ void Calendar_Option::Calendar_Option1()
 	Screen Screen_in_Calendar_Option1;
 	Go_to_xy Go_to_xy_in_Calendar_Option1;
 
-	while (1)
+	while (1) //년도와 월 입력받기
 	{
 		printf("Year : ____\b\b\b\b     Month : __\b\b");
 		Go_to_xy_in_Calendar_Option1.gotoxy(7, 1);
@@ -68,7 +68,7 @@ void Calendar_Option::Calendar_Option1()
 		{
 			Sleep(100);
 			system("cls"); //화면 전체지우기
-			Screen_in_Calendar_Option1.Calendar_Main_Screen();
+			Screen_in_Calendar_Option1.Main_Screen();
 			break;
 		}
 		else if (opt < 1 || opt>2)

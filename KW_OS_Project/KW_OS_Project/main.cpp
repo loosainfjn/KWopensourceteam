@@ -12,15 +12,17 @@ using namespace std;
 #include "Calendar_Option.h"
 #include "Screen.h"
 #include "Go_to_xy.h"
+#include "Tetris.h"
 
 int main()
 {
 	system("mode con cols=112 lines=180");
 	system("tiTle Calendar");
-
+	Tetris Tetris_in_main;
 	Screen Screen_in_main;
 
-	Screen_in_main.Calendar_Main_Screen();
+	
+	Screen_in_main.Main_Screen();
 	
 	return 0;
 }

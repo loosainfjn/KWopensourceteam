@@ -25,6 +25,9 @@
     <Filter Include="소스 파일\CalendarOption">
       <UniqueIdentifier>{1b5c3e16-4287-4b13-9513-5a206038d0ea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Game">
+      <UniqueIdentifier>{33e62811-bca4-4331-bdb8-3004401c52bc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MAIN.cpp">
@@ -32,12 +35,6 @@
     </ClCompile>
     <ClCompile Include="ChangeColor.cpp">
       <Filter>소스 파일\CalendarOption</Filter>
-    </ClCompile>
-    <ClCompile Include="Calendar_Main_Screen.cpp">
-      <Filter>소스 파일\Screen</Filter>
-    </ClCompile>
-    <ClCompile Include="Game_Main_Screen.cpp">
-      <Filter>소스 파일\Screen</Filter>
     </ClCompile>
     <ClCompile Include="Calendar_Month.cpp">
       <Filter>소스 파일\Calendar</Filter>
@@ -47,9 +44,6 @@
     </ClCompile>
     <ClCompile Include="Go_to_xy.cpp">
       <Filter>소스 파일\Other</Filter>
-    </ClCompile>
-    <ClCompile Include="Main_Screen.cpp">
-      <Filter>소스 파일\Screen</Filter>
     </ClCompile>
     <ClCompile Include="Calendar_Option1.cpp">
       <Filter>소스 파일\CalendarOption</Filter>
@@ -62,6 +56,12 @@
     </ClCompile>
     <ClCompile Include="Calendar_Option4.cpp">
       <Filter>소스 파일\CalendarOption</Filter>
+    </ClCompile>
+    <ClCompile Include="Tetris.cpp">
+      <Filter>소스 파일\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Main_Screen.cpp">
+      <Filter>소스 파일\Screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +78,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Calendar_Option.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Tetris.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

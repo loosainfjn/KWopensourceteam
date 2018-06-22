@@ -14,7 +14,7 @@ using namespace std;
 #include "Go_to_xy.h"
 
 
-void Calendar::Calendar_Week(int year, int month, int wknum)
+void Calendar::Calendar_Week(int year, int month, int wknum) //년도, 월, 일을 입력 받아 달력출력
 {
 	Go_to_xy Go_to_xy_in_Calendar_Week;
 	string sch[4][31];
